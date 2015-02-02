@@ -4,7 +4,8 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/MediaAnimationLib.iml" filepath="$PROJECT_DIR$/MediaAnimationLib.iml" />
       <module fileurl="file://$PROJECT_DIR$/MediaLabProject.iml" filepath="$PROJECT_DIR$/MediaLabProject.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/library/library.iml" filepath="$PROJECT_DIR$/library/library.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sampleApp/sampleApp.iml" filepath="$PROJECT_DIR$/sampleApp/sampleApp.iml" />
     </modules>
   </component>
 </project>
