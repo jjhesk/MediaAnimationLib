@@ -2,6 +2,8 @@
 The Library for animation library
 This is to promote the animation library runs on native android api. Using OpenGL technology to get the rendered image. Fast, Easy, and Furious!!
 
+Sample APK goes [here](https://github.com/jjhesk/MediaAnimationLib/blob/master/sampleApp/sampleApp-release.apk?raw=true)
+
 ```java
   private void addFragments() {
 
