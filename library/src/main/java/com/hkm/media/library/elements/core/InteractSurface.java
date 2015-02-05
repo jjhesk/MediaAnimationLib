@@ -26,7 +26,6 @@ public abstract class InteractSurface extends SurfaceView implements SurfaceHold
     protected ScaleGestureDetector mScaleGestureDetector = null;
 
 
-
     public InteractSurface(Context ctx, AttributeSet attrs, int defStyle) {
         super(ctx, attrs, defStyle);
         init();
@@ -41,6 +40,7 @@ public abstract class InteractSurface extends SurfaceView implements SurfaceHold
         super(ctx);
         init();
     }
+
     protected abstract void init();
 
 
@@ -69,6 +69,7 @@ public abstract class InteractSurface extends SurfaceView implements SurfaceHold
         return false;
     }
 
+    abstract protected void onDrawRender(final Canvas c);
 
     protected class drawMapSpecialGestureDetector extends GestureDetector {
         //    private int time_count = 0;

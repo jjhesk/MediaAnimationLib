@@ -11,7 +11,7 @@ import com.hkm.media.library.elements.core.InteractSurface;
 /**
  * Created by hesk on 2/2/2015.
  */
-public class SimpleSurface extends InteractSurface {
+public abstract class SimpleSurface extends InteractSurface {
     public SimpleSurface(Context ctx, AttributeSet attrs, int defStyle) {
         super(ctx, attrs, defStyle);
     }

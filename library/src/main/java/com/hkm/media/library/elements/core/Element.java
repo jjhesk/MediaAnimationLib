@@ -29,6 +29,11 @@ public abstract class Element {
         normal_paint = new Paint();
     }
 
+    public Element updateCanvas(Canvas cv) {
+        if (main == null) main = cv;
+        return this;
+    }
+
     public Element updateCanvas(Canvas cv, Matrix mx) {
         main = cv;
         global_matrix = mx;

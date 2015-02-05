@@ -4,6 +4,9 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Canvas;
+import android.graphics.Paint;
+import android.graphics.PorterDuff;
+import android.graphics.PorterDuffXfermode;
 import android.util.AttributeSet;
 
 import com.hkm.media.library.R;
@@ -15,7 +18,7 @@ import com.hkm.media.library.elements.core.InteractSurface;
  * Created by hesk on 2/2/2015.
  */
 public class ReactSurface extends InteractSurface {
-    private int mRippleColor;
+    private int mCanvasBackgroundColor = android.R.color.white;
     private boolean mIsAnimating = false;
     private boolean mHover = true;
 
@@ -31,10 +34,8 @@ public class ReactSurface extends InteractSurface {
         super(ctx, attrs, defStyle);
         TypedArray a = ctx.obtainStyledAttributes(attrs,
                 R.styleable.ReactSurface);
-        mRippleColor = a.getColor(R.styleable.ReactSurface_rippleColor,
-                mRippleColor);
-        mAlphaFactor = a.getFloat(R.styleable.ReactSurface_alphaFactor,
-                mAlphaFactor);
+        mCanvasBackgroundColor = a.getColor(R.styleable.ReactSurface_canvasColor, mCanvasBackgroundColor);
+        mAlphaFactor = a.getFloat(R.styleable.ReactSurface_alphaFactor, mAlphaFactor);
         mHover = a.getBoolean(R.styleable.ReactSurface_hover, mHover);
         a.recycle();
 
@@ -75,11 +76,24 @@ public class ReactSurface extends InteractSurface {
             @Override
             public void threadRender(Canvas c) {
                 mainCanvas = c;
-                onDraw(c);
+                onDrawRender(c);
             }
         });
         this.setFocusable(false);
+    }
 
+    @Override
+    protected void onDrawRender(Canvas c) {
+        Paint pl = new Paint();
+        pl.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.CLEAR));
+        c.drawPaint(pl);
+        pl.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.SRC));
+        pl.setColor(getResources().getColor(mCanvasBackgroundColor));
+        //c.drawPaint(pl);
+    }
+
+    protected void threadStart() {
+        canvasThread.start();
     }
 
 }

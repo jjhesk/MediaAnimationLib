@@ -2,8 +2,12 @@ package com.hkm.media.panels;
 
 import android.content.Context;
 import android.graphics.Canvas;
+import android.graphics.Paint;
+import android.graphics.PorterDuff;
+import android.graphics.PorterDuffXfermode;
 import android.util.AttributeSet;
 
+import com.hkm.media.library.R;
 import com.hkm.media.library.elements.core.Element;
 
 import java.util.Arrays;
@@ -14,6 +18,14 @@ import java.util.Arrays;
 public class PanAnimation extends ReactSurface {
     public PanAnimation(Context ctx, AttributeSet attrs, int defStyle) {
         super(ctx, attrs, defStyle);
+    }
+
+    public PanAnimation(Context ctx, AttributeSet attrs) {
+        super(ctx, attrs);
+    }
+
+    public PanAnimation(Context ctx) {
+        super(ctx);
     }
 
     private Element[] elements;
@@ -30,18 +42,24 @@ public class PanAnimation extends ReactSurface {
     }
 
     @Override
-    protected void onDraw(Canvas mcanvas) {
+    protected void onDrawRender(Canvas mcanvas) {
+        super.onDrawRender(mainCanvas);
         for (int i = 0; i < elements.length; i++) {
             final Element element = elements[i];
-            element.renderPath();
+            element.updateCanvas(mcanvas).renderPath();
         }
+
+    }
+
+    public void start() {
+        init();
     }
 
     @Override
     protected void init() {
         if (elements == null)
             elements = new Element[0];
-
         super.init();
+        threadStart();
     }
 }

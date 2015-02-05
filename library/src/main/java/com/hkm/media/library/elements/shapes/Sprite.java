@@ -1,6 +1,8 @@
 package com.hkm.media.library.elements.shapes;
 
 import android.graphics.Bitmap;
+import android.graphics.Paint;
+import android.graphics.Point;
 import android.graphics.Rect;
 
 import com.hkm.media.library.elements.core.Element;
@@ -22,12 +24,15 @@ public class Sprite extends Element {
     private int sprite_rows = 4;
     private int sprite_columns = 10;
     private int fps = 0;
+    private final Paint pbitmap = new Paint();
+
 
     public Sprite(Bitmap c) {
         bitmap_asset = c;
         x = y = xspeed = yspeed = 0;
         panel_width = 600;
         panel_height = 400;
+        pbitmap.setFilterBitmap(true);
     }
 
     //https://www.youtube.com/watch?v=J29V0nvmZ2M
@@ -45,6 +50,18 @@ public class Sprite extends Element {
 
     public Sprite setFPS(final int f) {
         fps = f;
+        return this;
+    }
+
+    public Sprite setPos(Point pos) {
+        x = pos.x;
+        y = pos.y;
+        return this;
+    }
+
+    public Sprite setPos(int _x, int _y) {
+        x = _x;
+        y = _y;
         return this;
     }
 
@@ -111,13 +128,15 @@ public class Sprite extends Element {
     @Override
     protected void rendering() {
         update();
-        int srcY = direction * height;
-        int srcX = currentFrame * width;
+        final int srcY = direction * height;
+        final int srcX = currentFrame * width;
         //startin on the size of the rendering object
         // Rect src = new Rect(0, 0, width, height);
-        Rect src = new Rect(srcX, srcY, srcX + width, srcY + height);
+        final Rect src = new Rect(srcX, srcY, srcX + width, srcY + height);
         //starting on the position of the render object
-        Rect dst = new Rect(x, y, x + width, y + height);
-        getMainCanvas().drawBitmap(bitmap_asset, src, dst, null);
+        final Rect dst = new Rect(x, y, x + width, y + height);
+
+
+        getMainCanvas().drawBitmap(bitmap_asset, src, dst, pbitmap);
     }
 }

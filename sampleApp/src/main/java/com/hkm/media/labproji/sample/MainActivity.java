@@ -1,5 +1,8 @@
 package com.hkm.media.labproji.sample;
 
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.Point;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
@@ -7,6 +10,8 @@ import android.view.MenuItem;
 
 import com.hkm.media.fragment.InteractFragment;
 import com.hkm.media.labproji.R;
+import com.hkm.media.library.elements.core.InteractSurface;
+import com.hkm.media.library.elements.shapes.Sprite;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -19,8 +24,17 @@ public class MainActivity extends ActionBarActivity {
     }
 
     private void addFragments() {
-        MainActivity.this.getSupportFragmentManager().beginTransaction()
-                .add(R.id.container, new InteractFragment())
+
+        final InteractFragment ifragment = new InteractFragment();
+        final Bitmap bm = BitmapFactory.decodeResource(getResources(), R.drawable.rpg_maker_vx_ace_character_jet_fighte_by_moon6666d869q3z);
+        final Sprite sprite = new Sprite(bm);
+        sprite.defineRowCol(4, 3).setFPS(100).setPos(new Point(5, 5)).done();
+        ifragment.addArtwork(sprite);
+
+        MainActivity.this
+                .getSupportFragmentManager()
+                .beginTransaction()
+                .add(R.id.container, ifragment)
                 .commit();
 
     }
