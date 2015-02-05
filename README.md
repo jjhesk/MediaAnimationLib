@@ -25,3 +25,15 @@ Sample APK goes [here](https://github.com/jjhesk/MediaAnimationLib/blob/master/s
 
 ```
 This is the first simple implementation for one single Sprite file on the canvas
+Declare in the xml for extra settings
+```xml
+
+ <com.hkm.media.panels.PanAnimation
+        PanAnimation:canvasColor="@color/my_color_v1"
+        PanAnimation:alphaFactor="32.3f"
+        PanAnimation:hover="true"
+        
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/panel" />
+```
