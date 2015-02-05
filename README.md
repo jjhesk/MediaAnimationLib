@@ -29,7 +29,7 @@ Declare in the xml for extra settings
 ```xml
 
  <com.hkm.media.panels.PanAnimation
-        PanAnimation:canvasColor="@color/my_color_v1"
+        PanAnimation:canvasColor="@color/green_dark_simple"
         PanAnimation:alphaFactor="32.3f"
         PanAnimation:hover="true"
         
