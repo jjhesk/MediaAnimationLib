@@ -4,12 +4,11 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Canvas;
-import android.graphics.Color;
-import android.graphics.Paint;
 import android.util.AttributeSet;
 
 import com.hkm.media.library.R;
 import com.hkm.media.library.elements.core.CanvasThread;
+import com.hkm.media.library.elements.core.Element;
 import com.hkm.media.library.elements.core.InteractSurface;
 
 /**
@@ -26,6 +25,7 @@ public class ReactSurface extends InteractSurface {
     private float mDensity;
     private float mRadius;
     private float mMaxRadius;
+
 
     public ReactSurface(Context ctx, AttributeSet attrs, int defStyle) {
         super(ctx, attrs, defStyle);
@@ -47,6 +47,7 @@ public class ReactSurface extends InteractSurface {
     public ReactSurface(Context ctx) {
         super(ctx);
     }
+
     private int dp(int dp) {
         return (int) (dp * mDensity + 0.5f);
     }

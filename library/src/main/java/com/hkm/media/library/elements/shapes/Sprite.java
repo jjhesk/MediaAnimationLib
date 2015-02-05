@@ -1,47 +1,68 @@
 package com.hkm.media.library.elements.shapes;
 
 import android.graphics.Bitmap;
-import android.graphics.Canvas;
 import android.graphics.Rect;
+
+import com.hkm.media.library.elements.core.Element;
 
 
 /**
  * This is the BaseBottom sprite engine for a working one
  * Created by Hesk on
  */
-public class Sprite {
+public class Sprite extends Element {
     private int x, y;
     private int xspeed, yspeed;
     private int height, width;
-    private Bitmap cir;
+    private Bitmap bitmap_asset;
     private int panel_width, panel_height;
     //initial direction once from the starting point
     private int direction = 3;
     private int currentFrame = 0;
     private int sprite_rows = 4;
     private int sprite_columns = 10;
+    private int fps = 0;
 
     public Sprite(Bitmap c) {
-
-        cir = c;
-        height = cir.getHeight() / sprite_rows;
-        width = cir.getWidth() / sprite_columns;
-        x = y = 0;
-        xspeed = 2;
-        yspeed = 0;
+        bitmap_asset = c;
+        x = y = xspeed = yspeed = 0;
+        panel_width = 600;
+        panel_height = 400;
     }
 
     //https://www.youtube.com/watch?v=J29V0nvmZ2M
-    public void defineSprite(int r, int c) {
+    public Sprite defineRowCol(int r, int c) {
         sprite_columns = c;
         sprite_rows = r;
+        return this;
     }
 
-    public void setconfig(int rows, int columns) {
-        sprite_rows = rows;
-        sprite_columns = columns;
+    public Sprite setSpeed(int _v_x, int _v_y) {
+        xspeed = _v_x;
+        yspeed = _v_y;
+        return this;
     }
 
+    public Sprite setFPS(final int f) {
+        fps = f;
+        return this;
+    }
+
+    public void done() {
+        height = bitmap_asset.getHeight() / sprite_rows;
+        width = bitmap_asset.getWidth() / sprite_columns;
+    }
+
+
+    private void frameplay() {
+        currentFrame = ++currentFrame % sprite_columns;
+    }
+
+    private void rt_offset_position() {
+        x += xspeed;
+        y += yspeed;
+
+    }
 
     public void update() {
 
@@ -76,17 +97,19 @@ public class Sprite {
             yspeed = 0;
             direction = 3;
         }
-        x += xspeed;
-        y += yspeed;
+
+        rt_offset_position();
         try {
-            Thread.sleep(50);
+            Thread.sleep(fps);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        currentFrame = ++currentFrame % sprite_columns;
+        frameplay();
     }
 
-    public void onDraw(Canvas cvs) {
+
+    @Override
+    protected void rendering() {
         update();
         int srcY = direction * height;
         int srcX = currentFrame * width;
@@ -95,6 +118,6 @@ public class Sprite {
         Rect src = new Rect(srcX, srcY, srcX + width, srcY + height);
         //starting on the position of the render object
         Rect dst = new Rect(x, y, x + width, y + height);
-        cvs.drawBitmap(cir, src, dst, null);
+        getMainCanvas().drawBitmap(bitmap_asset, src, dst, null);
     }
 }

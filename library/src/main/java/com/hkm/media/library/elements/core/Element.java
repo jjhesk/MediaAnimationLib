@@ -1,4 +1,4 @@
-package com.hkm.media.library.elements.shapes;
+package com.hkm.media.library.elements.core;
 
 import android.content.Context;
 import android.graphics.Canvas;
@@ -15,18 +15,18 @@ public abstract class Element {
     protected Paint normal_paint;
 
     public Element() {
-        this.normal_paint = new Paint();
+        normal_paint = new Paint();
     }
 
     public Element(Canvas setCanvas) {
         main = setCanvas;
-        this.normal_paint = new Paint();
+        normal_paint = new Paint();
     }
 
-    public Element(Canvas mcanvas, Context ctx) {
+    public Element(Canvas mcanvas, Context _ctx) {
         main = mcanvas;
-        this.ctx = ctx;
-        this.normal_paint = new Paint();
+        ctx = _ctx;
+        normal_paint = new Paint();
     }
 
     public Element updateCanvas(Canvas cv, Matrix mx) {
@@ -35,12 +35,23 @@ public abstract class Element {
         return this;
     }
 
+    public boolean IsMatrixSet() {
+        return global_matrix != null;
+    }
+
+    public Canvas getMainCanvas() {
+        return main;
+    }
+
+    public Context getContext() {
+        return ctx;
+    }
+
     /**
      * this is the path for the elements of drawing to be filled
      */
 
     protected abstract void rendering();
-
 
     public void renderPath() {
         this.rendering();
