@@ -1,4 +1,4 @@
-package com.hkm.media.library.elements;
+package com.hkm.media.panels;
 
 import android.annotation.SuppressLint;
 import android.content.Context;

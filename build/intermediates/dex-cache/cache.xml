@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/Users/hesk/GitHub/MediaAnimationLib/sampleApp/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="81d42bf983a8741f4888a6e333e454e4a5e0eeb7">
+        <dex dex="/Users/hesk/GitHub/MediaAnimationLib/sampleApp/build/intermediates/pre-dexed/debug/classes-797e1df3c276a5838be699b7578908f6adac0535.jar" />
+    </item>
+    <item
+        jar="/Users/hesk/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/21.0.3/support-annotations-21.0.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="4b74cefe1f0c1b819e7260c8627a14674e37fd35">
+        <dex dex="/Users/hesk/GitHub/MediaAnimationLib/sampleApp/build/intermediates/pre-dexed/debug/support-annotations-21.0.3-c94ab95b344d4a4110d4d413e0511704b267791d.jar" />
+    </item>
+    <item
+        jar="/Users/hesk/GitHub/MediaAnimationLib/sampleApp/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
+        <dex dex="/Users/hesk/GitHub/MediaAnimationLib/sampleApp/build/intermediates/pre-dexed/debug/classes-3dd04c5651267f2a84a0e8d63408fa4fd951843d.jar" />
+    </item>
+    <item
+        jar="/Users/hesk/GitHub/MediaAnimationLib/sampleApp/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/libs/internal_impl-21.0.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
+        <dex dex="/Users/hesk/GitHub/MediaAnimationLib/sampleApp/build/intermediates/pre-dexed/debug/internal_impl-21.0.3-f70cd52c21982712c63f527bce1522db38b43798.jar" />
+    </item>
+    <item
+        jar="/Users/hesk/GitHub/MediaAnimationLib/sampleApp/build/intermediates/exploded-aar/MediaAnimationLib/library/unspecified/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="0ae0431c8fa8201b5aa9b70f36008e5af097fdda">
+        <dex dex="/Users/hesk/GitHub/MediaAnimationLib/sampleApp/build/intermediates/pre-dexed/debug/classes-3bd79f6300c69216d5cbc943c54ee8f2ec77898b.jar" />
+    </item>
+
+</items>

@@ -1,10 +1,11 @@
 package com.hkm.media.labproji.sample;
 
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.hkm.media.fragment.InteractFragment;
 import com.hkm.media.labproji.R;
 
 
@@ -13,9 +14,16 @@ public class MainActivity extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.frame_main);
+        addFragments();
     }
 
+    private void addFragments() {
+        MainActivity.this.getSupportFragmentManager().beginTransaction()
+                .add(R.id.container, new InteractFragment())
+                .commit();
+
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
