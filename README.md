@@ -39,9 +39,11 @@ Declare in the xml for extra settings
         android:layout_height="match_parent"
         android:id="@+id/panel" />
 ```
-Introduction
+
+
+Related Library Universial Tween Engine documentations.
 ============
-The Universal Tween Engine enables the interpolation of every attribute from any object in any Java project (being Swing, SWT, OpenGL or even Console-based). Implement the TweenAccessor interface, register it to the engine, and animate anything you want!
+The Universal Tween Engine enables the interpolation of every attribute from any object in any Java project (being Swing, SWT, OpenGL or even Console-based). Implement the TweenAccessor interface, register it to the engine, and animate anything you want! Currently, we are working hard to integrate with PanAnimation
 
 In one line, send your objects to another position (here x=20 and y=30), with a smooth elastic transition, during 1 second).
 ```java
