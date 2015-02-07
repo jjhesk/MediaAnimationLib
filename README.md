@@ -44,7 +44,7 @@ Introduction
 The Universal Tween Engine enables the interpolation of every attribute from any object in any Java project (being Swing, SWT, OpenGL or even Console-based). Implement the TweenAccessor interface, register it to the engine, and animate anything you want!
 
 In one line, send your objects to another position (here x=20 and y=30), with a smooth elastic transition, during 1 second).
-```
+```java
 // Arguments are (1) the target, (2) the type of interpolation, 
 // and (3) the duration in seconds. Additional methods specify  
 // the target values, and the easing function. 
@@ -81,7 +81,7 @@ myManager.update(delta * speed);
 
 Create some powerful animation sequences!
 
-```
+```java
 Timeline.createSequence()
     // First, set all objects to their initial positions
     .push(Tween.set(...))
