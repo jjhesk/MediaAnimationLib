@@ -28,7 +28,9 @@ Sample APK goes [here](https://github.com/jjhesk/MediaAnimationLib/blob/master/s
 
 ## Sprite Implementations
 The sprite should be declared before initializing the animation call. Check out from here..
-[![Telecine](sampleApp/src/main/res/drawable/rpg_maker_vx_ace_character_jet_fighte_by_moon6666d869q3z.png)][1]
+
+![Sprite](sampleApp/src/main/res/drawable/rpg_maker_vx_ace_character_jet_fighte_by_moon6666d869q3z.png)]
+
 From the above sprite you will get this image of 4 by 3 
 ```java
   final Sprite sprite = new Sprite(bm);
