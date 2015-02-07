@@ -10,11 +10,13 @@ import android.view.MenuItem;
 
 import com.hkm.media.fragment.InteractFragment;
 import com.hkm.media.labproji.R;
+import com.hkm.media.library.elements.core.Element;
 import com.hkm.media.library.elements.mathmodels.Movement;
 import com.hkm.media.library.elements.shapes.Sprite;
 
 
 public class MainActivity extends ActionBarActivity {
+    private final InteractFragment ifragment = new InteractFragment();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,7 +28,7 @@ public class MainActivity extends ActionBarActivity {
 
     private void addFragments() {
 
-        final InteractFragment ifragment = new InteractFragment();
+
         final Bitmap bm = BitmapFactory.decodeResource(getResources(), R.drawable.rpg_maker_vx_ace_character_jet_fighte_by_moon6666d869q3z);
         final Sprite sprite = new Sprite(bm);
 
@@ -37,7 +39,10 @@ public class MainActivity extends ActionBarActivity {
                 .setPos(new Point(5, 5))
                 .setMovement(
                         new Movement(Movement.movemode.HORIZONTAL_X)
-                ).done();
+                )
+                .done();
+
+
         ifragment.addArtwork(sprite);
 
         MainActivity.this
@@ -45,6 +50,12 @@ public class MainActivity extends ActionBarActivity {
                 .beginTransaction()
                 .add(R.id.container, ifragment)
                 .commit();
+
+    }
+
+    public void inspectDrawQueue() {
+        final Element[] elelist = ifragment.getPanel().getDrawQueue();
+
 
     }
 

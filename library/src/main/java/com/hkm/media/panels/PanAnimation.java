@@ -41,12 +41,16 @@ public class PanAnimation extends ReactSurface {
         return this;
     }
 
+    public Element[] getDrawQueue() {
+        return elements;
+    }
+
     @Override
     protected void onDrawRender(Canvas mcanvas) {
         super.onDrawRender(mainCanvas);
         for (int i = 0; i < elements.length; i++) {
             final Element element = elements[i];
-            if(element!=null){
+            if (element != null) {
                 element.updateCanvas(mcanvas).renderPath();
             }
         }

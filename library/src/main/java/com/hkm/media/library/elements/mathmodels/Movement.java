@@ -1,5 +1,7 @@
 package com.hkm.media.library.elements.mathmodels;
 
+import android.graphics.Rect;
+
 /**
  * Created by hesk on 2/6/15.
  */
@@ -14,6 +16,10 @@ public class Movement {
 
     public enum movemode {
         HORIZONTAL_X, BONCE_MOVE
+    }
+
+    public enum SimpleDirection {
+        HORIZONTAL, VERTICAL, SLOPE_ONE, SLOP_NEG_ONE
     }
 
     private movemode _movemode;
@@ -54,8 +60,21 @@ public class Movement {
     }
 
 
-    private void sample_move_horizontal() {
-
+    private void sample_move(SimpleDirection direction, Rect bounce) {
+        switch (direction) {
+            case HORIZONTAL:
+                //sample_move_in_bonuce();
+                break;
+            case VERTICAL:
+                //sample_move_horizontal();
+                break;
+            case SLOPE_ONE:
+                //sample_move_horizontal();
+                break;
+            case SLOP_NEG_ONE:
+                //sample_move_horizontal();
+                break;
+        }
     }
 
     public void update() {
@@ -64,7 +83,7 @@ public class Movement {
                 //sample_move_in_bonuce();
                 break;
             case HORIZONTAL_X:
-                sample_move_horizontal();
+                //sample_move_horizontal();
                 break;
         }
     }
