@@ -4,7 +4,7 @@ This is to promote the animation library runs on native android api. Currently t
 
 Sample APK goes [here](https://github.com/jjhesk/MediaAnimationLib/blob/master/sampleApp/sampleApp-release.apk?raw=true)
 
-h2. Fragment implementations
+### Fragment implementations
 ```java
   private void addFragments() {
 
@@ -27,7 +27,7 @@ h2. Fragment implementations
 ```
 This is the first simple implementation for one single Sprite file on the canvas
 Declare in the xml for extra settings
-h2. xml implementation
+### xml implementation
 ```xml
 
  <com.hkm.media.panels.PanAnimation
