@@ -2,115 +2,11 @@
 <items version="2" >
 
     <item
-        jar="/Users/hesk/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/21.0.3/support-annotations-21.0.3.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="4b74cefe1f0c1b819e7260c8627a14674e37fd35">
-        <dex dex="/Users/hesk/GitHub/MediaAnimationLib/sampleApp/build/intermediates/pre-dexed/debug/support-annotations-21.0.3-c94ab95b344d4a4110d4d413e0511704b267791d.jar" />
-    </item>
-    <item
-<<<<<<< HEAD
-        jar="F:\backupgithub\MediaAnimationLib\sampleApp\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.3\classes.jar"
-=======
-        jar="/Users/hesk/GitHub/MediaAnimationLib/sampleApp/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="81d42bf983a8741f4888a6e333e454e4a5e0eeb7">
-        <dex dex="/Users/hesk/GitHub/MediaAnimationLib/sampleApp/build/intermediates/pre-dexed/debug/classes-797e1df3c276a5838be699b7578908f6adac0535.jar" />
-    </item>
-    <item
-        jar="/Users/hesk/GitHub/MediaAnimationLib/sampleApp/build/intermediates/exploded-aar/com.pkmmte.view/circularimageview/1.1/classes.jar"
->>>>>>> origin/master
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="c341a7ad32bc2eef9dcfab239262b77ac60788cc">
-        <dex dex="/Users/hesk/GitHub/MediaAnimationLib/sampleApp/build/intermediates/pre-dexed/debug/classes-2b6c39d26486ea2f682a0186625bc7f6e0e61930.jar" />
-    </item>
-    <item
-<<<<<<< HEAD
-        jar="F:\backupgithub\MediaAnimationLib\AE_sample\build\intermediates\exploded-aar\MediaAnimationLib\andEngine\unspecified\classes.jar"
-        jumboMode="false"
-        revision="21.1.0"
-        sha1="c53496cc95262278aea305c4be80d44493715b7e">
-        <dex dex="F:\backupgithub\MediaAnimationLib\AE_sample\build\intermediates\pre-dexed\debug\classes-55c1a0318d58855f0cb37bc0c6f9edeb9df09235.jar" />
-=======
-        jar="/Users/hesk/GitHub/MediaAnimationLib/sampleApp/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
-        <dex dex="/Users/hesk/GitHub/MediaAnimationLib/sampleApp/build/intermediates/pre-dexed/debug/classes-3dd04c5651267f2a84a0e8d63408fa4fd951843d.jar" />
->>>>>>> origin/master
-    </item>
-    <item
-        jar="/Users/hesk/GitHub/MediaAnimationLib/sampleApp/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/libs/internal_impl-21.0.3.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
-        <dex dex="/Users/hesk/GitHub/MediaAnimationLib/sampleApp/build/intermediates/pre-dexed/debug/internal_impl-21.0.3-f70cd52c21982712c63f527bce1522db38b43798.jar" />
-    </item>
-    <item
-<<<<<<< HEAD
-        jar="F:\backupgithub\MediaAnimationLib\AE_sample\build\intermediates\exploded-aar\MediaAnimationLib\andEnginePhysicsBox2DExtension\unspecified\classes.jar"
-        jumboMode="false"
-        revision="21.1.0"
-        sha1="f4c3c4fdc59e62a529593ee03123349569499265">
-        <dex dex="F:\backupgithub\MediaAnimationLib\AE_sample\build\intermediates\pre-dexed\debug\classes-b9cf3fc194dda96aeb0216087131a619af10cda0.jar" />
-    </item>
-    <item
         jar="F:\backupgithub\MediaAnimationLib\sampleApp\build\intermediates\exploded-aar\MediaAnimationLib\library\unspecified\classes.jar"
         jumboMode="false"
         revision="21.1.2"
-        sha1="ad020cec8a7235964e9c44e1b016bea65289be0b">
-        <dex dex="F:\backupgithub\MediaAnimationLib\sampleApp\build\intermediates\pre-dexed\release\classes-a747ce30b5c75b4a8c4dcec77c347f89b0c69a9d.jar" />
-    </item>
-    <item
-        jar="F:\backupgithub\MediaAnimationLib\AE_sample\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.2\classes.jar"
-        jumboMode="false"
-        revision="21.1.0"
-        sha1="d1bf02de1c56d942e7a9d093b8610ba1ef4128e3">
-        <dex dex="F:\backupgithub\MediaAnimationLib\AE_sample\build\intermediates\pre-dexed\debug\classes-b683f3c28ef9adbd876deae1d9ce9a52046ac85f.jar" />
-    </item>
-    <item
-        jar="F:\backupgithub\MediaAnimationLib\sampleApp\build\intermediates\exploded-aar\com.pkmmte.view\circularimageview\1.1\classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="c341a7ad32bc2eef9dcfab239262b77ac60788cc">
-        <dex dex="F:\backupgithub\MediaAnimationLib\sampleApp\build\intermediates\pre-dexed\debug\classes-7f0a75ef644b103fad1aadaff6f3a0e0f78f6bbe.jar" />
-    </item>
-    <item
-        jar="F:\backupgithub\MediaAnimationLib\sampleApp\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
-        <dex dex="F:\backupgithub\MediaAnimationLib\sampleApp\build\intermediates\pre-dexed\debug\classes-bc13af11aa31fdee0ff711bbbe01cbce9ec3bfdc.jar" />
-    </item>
-    <item
-        jar="F:\backupgithub\MediaAnimationLib\AE_sample\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\classes.jar"
-        jumboMode="false"
-        revision="21.1.0"
-        sha1="7ae2d38807a43b2f2185ff4089a92c790b579e54">
-        <dex dex="F:\backupgithub\MediaAnimationLib\AE_sample\build\intermediates\pre-dexed\debug\classes-b8373e270f3f8e12dfe46bd7109ae2c07e86bbef.jar" />
-    </item>
-    <item
-        jar="F:\backupgithub\MediaAnimationLib\AE_sample\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.2\libs\internal_impl-21.0.2.jar"
-        jumboMode="false"
-        revision="21.1.0"
-        sha1="962e8b12569c56dbdcf8367eb4eac8bb129cd18f">
-        <dex dex="F:\backupgithub\MediaAnimationLib\AE_sample\build\intermediates\pre-dexed\debug\internal_impl-21.0.2-c89f0fea0386edf026de4f33c5890ad7030a1523.jar" />
-    </item>
-    <item
-        jar="M:\tempAndroid\sdk\extras\android\m2repository\com\android\support\support-annotations\21.0.2\support-annotations-21.0.2.jar"
-        jumboMode="false"
-        revision="21.1.0"
-        sha1="99373741f99a0556ee293c41e8faa1ca3ae8a4e6">
-        <dex dex="F:\backupgithub\MediaAnimationLib\AE_sample\build\intermediates\pre-dexed\debug\support-annotations-21.0.2-dad2754fe50d865f23a23a5f19129a6d1d687513.jar" />
-=======
-        jar="/Users/hesk/GitHub/MediaAnimationLib/sampleApp/build/intermediates/exploded-aar/MediaAnimationLib/library/unspecified/classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="1682aa2109fbb4127f807207b4b820d883144fb0">
-        <dex dex="/Users/hesk/GitHub/MediaAnimationLib/sampleApp/build/intermediates/pre-dexed/debug/classes-3bd79f6300c69216d5cbc943c54ee8f2ec77898b.jar" />
->>>>>>> origin/master
+        sha1="1c74d96d01a03eedb96ab0201453d77b6f74404b">
+        <dex dex="F:\backupgithub\MediaAnimationLib\sampleApp\build\intermediates\pre-dexed\debug\classes-a747ce30b5c75b4a8c4dcec77c347f89b0c69a9d.jar" />
     </item>
 
 </items>

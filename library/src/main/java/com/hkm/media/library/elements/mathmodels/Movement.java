@@ -6,6 +6,8 @@ import android.graphics.Rect;
  * Created by hesk on 2/6/15.
  */
 public class Movement {
+    private double degree = 0d;
+
     public Movement(movemode m) {
         _movemode = m;
     }
@@ -75,6 +77,15 @@ public class Movement {
                 //sample_move_horizontal();
                 break;
         }
+    }
+
+    public void update(int x, int y, int level) {
+
+    }
+
+    public void update(int xspeed, int yspeed) {
+        degree += 2d;
+        xspeed = (int) (100 * Math.sin(degree));
     }
 
     public void update() {

@@ -31,15 +31,15 @@ public class MainActivity extends ActionBarActivity {
 
         final Bitmap bm = BitmapFactory.decodeResource(getResources(), R.drawable.rpg_maker_vx_ace_character_jet_fighte_by_moon6666d869q3z);
         final Sprite sprite = new Sprite(bm);
+        final Movement mm = new Movement(Movement.movemode.HORIZONTAL_X);
 
         // final int width = ifragment.getActivity().getw
         sprite
+                .setFrameType(Sprite.frameType.ANIMATION)
                 .defineRowCol(4, 3)
-                .setFPS(100)
+                .setFPS(50)
                 .setPos(new Point(5, 5))
-                .setMovement(
-                        new Movement(Movement.movemode.HORIZONTAL_X)
-                )
+                .setMovement(mm)
                 .done();
 
 
