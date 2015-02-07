@@ -1,9 +1,10 @@
 # MediaAnimationLib
 The Library for animation library
-This is to promote the animation library runs on native android api. Using OpenGL technology to get the rendered image. Fast, Easy, and Furious!!
+This is to promote the animation library runs on native android api. Currently there are two main library component. The first one is using the surfaceview and the second on using GLsurfaceview. The second will require OpenGL technology to get the rendered image. This project is still under heavy developments. Its the way to enjoy Fast, Easy, and Furious animation canvas !!
 
 Sample APK goes [here](https://github.com/jjhesk/MediaAnimationLib/blob/master/sampleApp/sampleApp-release.apk?raw=true)
 
+### Fragment implementations
 ```java
   private void addFragments() {
 
@@ -26,6 +27,7 @@ Sample APK goes [here](https://github.com/jjhesk/MediaAnimationLib/blob/master/s
 ```
 This is the first simple implementation for one single Sprite file on the canvas
 Declare in the xml for extra settings
+### xml implementation
 ```xml
 
  <com.hkm.media.panels.PanAnimation

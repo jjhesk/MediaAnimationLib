@@ -43,6 +43,21 @@ public abstract class InteractSurface extends SurfaceView implements SurfaceHold
 
     protected abstract void init();
 
+    protected int canvas_w, canvas_h;
+
+    protected void onMeasure(int x, int y) {
+        canvas_w = x;
+        canvas_h = y;
+        super.onMeasure(x, y);
+    }
+
+    public int getCWidth() {
+        return canvas_w;
+    }
+
+    public int getCHeight() {
+        return canvas_h;
+    }
 
     @Override
     public void surfaceRedrawNeeded(SurfaceHolder holder) {
