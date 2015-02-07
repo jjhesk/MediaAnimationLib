@@ -129,17 +129,3 @@ Main features are:
 * Simple timers can be built with Tween.call().
 * Source code extensively documented!
 * A test executable can be found in the download section. Its source code, in the source repository, will help you to get started.
-
-Get started and documentation index
-===================================
-Detailed documentation with code snippets and examples is available for the following topics:
-
-<https://code.google.com/p/java-universal-tween-engine/wiki/GetStarted> --- A step-by-step example to get you started, with code
-
-<https://code.google.com/p/java-universal-tween-engine/wiki/TweenAccessor> --- Know how to implement it
-
-<https://code.google.com/p/java-universal-tween-engine/wiki/Tween> --- See what are the possibilities
-
-<https://code.google.com/p/java-universal-tween-engine/wiki/Timeline> --- Learn how to build powerful sequences
-
-<https://code.google.com/p/java-universal-tween-engine/wiki/AndroidUI> --- See how to use the TweenEngine with Android UIs
