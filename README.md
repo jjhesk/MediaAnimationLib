@@ -25,6 +25,21 @@ Sample APK goes [here](https://github.com/jjhesk/MediaAnimationLib/blob/master/s
     }
 
 ```
+
+## Sprite Implementations
+The sprite should be declared before initializing the animation call. Check out from here..
+
+```java
+  final Sprite sprite = new Sprite(bm);
+  final Movement mm = new Movement(Movement.movemode.HORIZONTAL_X);
+  sprite
+                .setFrameType(Sprite.frameType.ANIMATION)
+                .defineRowCol(4, 3)
+                .setFPS(50)
+                .setPos(new Point(5, 5))
+                .setMovement(mm)
+                .done();
+```
 This is the first simple implementation for one single Sprite file on the canvas
 Declare in the xml for extra settings
 ### xml implementation
