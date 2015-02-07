@@ -36,8 +36,8 @@ public class PanAnimation extends ReactSurface {
         return result;
     }
 
-    public PanAnimation addArtWork(final Element ele) {
-        elements = addElement(ele);
+    public PanAnimation addElements(final Element[] ele) {
+        elements = ele;
         return this;
     }
 

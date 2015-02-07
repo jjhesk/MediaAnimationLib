@@ -1,6 +1,9 @@
 package com.hkm.media.fragment;
 
 import android.app.Activity;
+import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -9,6 +12,7 @@ import android.view.ViewGroup;
 
 import com.hkm.media.library.R;
 import com.hkm.media.library.elements.core.Element;
+import com.hkm.media.library.elements.shapes.Sprite;
 import com.hkm.media.panels.PanAnimation;
 
 /**
@@ -16,7 +20,7 @@ import com.hkm.media.panels.PanAnimation;
  */
 public class InteractFragment extends Fragment {
 
-    private Element new_elem;
+    private Element[] new_elem;
     private PanAnimation panel;
 
 
@@ -45,7 +49,7 @@ public class InteractFragment extends Fragment {
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         panel = (PanAnimation) view.findViewById(R.id.panel);
-        panel.addArtWork(new_elem);
+        panel.addElements(new_elem);
         panel.start();
     }
 
@@ -54,7 +58,23 @@ public class InteractFragment extends Fragment {
      *
      * @param e
      */
-    public void addArtwork(Element e) {
+    public void addChilds(Element[] e) {
         new_elem = e;
+    }
+
+    public static Sprite newCharacter(final int resId, Context context) {
+        final Bitmap bm = BitmapFactory.decodeResource(context.getResources(), resId);
+        final Sprite sp = new Sprite(bm);
+        sp.setFPS(50);
+        sp.setFrameType(Sprite.frameType.CHARACTER);
+        return sp;
+    }
+
+    public static Sprite newAnimation(final int resId, Context context) {
+        final Bitmap bm = BitmapFactory.decodeResource(context.getResources(), resId);
+        final Sprite sp = new Sprite(bm);
+        sp.setFPS(50);
+        sp.setFrameType(Sprite.frameType.ANIMATION);
+        return sp;
     }
 }

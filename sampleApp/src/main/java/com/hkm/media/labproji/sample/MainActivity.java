@@ -25,26 +25,19 @@ public class MainActivity extends ActionBarActivity {
         addFragments();
     }
 
+    private Element[] constructChildren() {
+        final Sprite sprite1 = InteractFragment.newAnimation(R.drawable.rpg_maker_vx_ace_character_jet_fighte_by_moon6666d869q3z, this);
+        final Sprite sprite2 = InteractFragment.newAnimation(R.drawable.rpg_maker_vx_ace___smokescreen_sprite_by_pharaoh_yami7nn7f0, this);
+        final Movement mm = new Movement(Movement.movemode.HORIZONTAL_X);
+        sprite1.defineRowCol(4, 3).setPos(new Point(120, 100)).setMovement(mm).done();
+        sprite2.defineRowCol(4, 3).setPos(new Point(350, 190)).setMovement(mm).done();
+        return new Element[]{
+                sprite1, sprite2
+        };
+    }
 
     private void addFragments() {
-
-
-        final Bitmap bm = BitmapFactory.decodeResource(getResources(), R.drawable.rpg_maker_vx_ace_character_jet_fighte_by_moon6666d869q3z);
-        final Sprite sprite = new Sprite(bm);
-        final Movement mm = new Movement(Movement.movemode.HORIZONTAL_X);
-
-        // final int width = ifragment.getActivity().getw
-        sprite
-                .setFrameType(Sprite.frameType.ANIMATION)
-                .defineRowCol(4, 3)
-                .setFPS(50)
-                .setPos(new Point(5, 5))
-                .setMovement(mm)
-                .done();
-
-
-        ifragment.addArtwork(sprite);
-
+        ifragment.addChilds(constructChildren());
         MainActivity.this
                 .getSupportFragmentManager()
                 .beginTransaction()
