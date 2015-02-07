@@ -46,7 +46,9 @@ public class PanAnimation extends ReactSurface {
         super.onDrawRender(mainCanvas);
         for (int i = 0; i < elements.length; i++) {
             final Element element = elements[i];
-            element.updateCanvas(mcanvas).renderPath();
+            if(element!=null){
+                element.updateCanvas(mcanvas).renderPath();
+            }
         }
 
     }

@@ -1,1 +1,1 @@
-include ':sampleApp', ':library'
+include ':sampleApp', ':library', ':andEngine', ':andEnginePhysicsBox2DExtension', ':AE_sample'

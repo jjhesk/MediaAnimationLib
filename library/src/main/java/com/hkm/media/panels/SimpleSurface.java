@@ -31,8 +31,8 @@ public abstract class SimpleSurface extends InteractSurface {
         this.setFocusable(true);
         this.setFocusableInTouchMode(true);
         this.setOnTouchListener(this);
-      //  mScaleGestureDetector = new ScaleGestureDetector(getContext(), new ScaleGestureListener());
-      //  mGestureDetector = new drawMapSpecialGestureDetector(getContext(), new commonGestureListenr());
+        //  mScaleGestureDetector = new ScaleGestureDetector(getContext(), new ScaleGestureListener());
+        //  mGestureDetector = new drawMapSpecialGestureDetector(getContext(), new commonGestureListenr());
         thePanelHolder.setFixedSize(getWidth(), getHeight());
         // this.setOnTouchListener(getApplicationContext());
         canvasThread = new CanvasThread(thePanelHolder, new CanvasThread.CallBack() {
@@ -44,9 +44,5 @@ public abstract class SimpleSurface extends InteractSurface {
             }
         });
         this.setFocusable(false);
-
     }
-
-
-
 }
